@@ -4,7 +4,7 @@ Tein tämän sivuston Soulgrind-bändille Bootstrap 5:llä. Sivusto toimii tieto
 
 **Tekijä:** Miika Niemelä  
 **Päivämäärä:** 19.12.2025  
-**Kurssi:** Web-ohjelmointi
+**Kurssi:** Digitekniikat
 
 ## Mitä sivustolla on
 
@@ -167,5 +167,6 @@ Jos haluat vaihtaa värejä, muokkaa `style.css` tiedoston alkua:
 - https://github.com/azhemin/Soulgrind
 
 ---
+
 
 **Tehty koulutyönä 2025** 🎸
