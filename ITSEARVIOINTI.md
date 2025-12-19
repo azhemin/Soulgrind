@@ -1,53 +1,150 @@
-# ITSEARVIOINTI - OMAN OPPIMISEN REFLEKTOINTI
-## Bootstrap 5 Responsiivinen Sivusto -projekti
+# ITSEARVIOINTI
 
-**Opiskelija:** [Nimi]  
-**Kurssi:** Web-ohjelmointi  
-**Projekti:** Soulgrind-bändisivusto  
-**Päivämäärä:** 19.12.2025
+**Tekijä:** Miika Niemelä  
+**Päivämäärä:** 19.12.2025  
+**Projekti:** Soulgrind bändisivusto
 
 ---
 
-## 1. PROJEKTIN TAVOITTEET JA NIIDEN SAAVUTTAMINEN
+## 1. PROJEKTIN ALOITUS
 
-### 1.1 Asetetut tavoitteet
+Kun sain tehtäväksi tehdä responsiivisen sivuston Bootstrap 5:llä, päätin tehdä sen Soulgrind-nimisen metal-bändin sivuista. Valitsin bändin koska pidän heidän musiikistaan ja kaikki tiedot löytyy helposti netistä.
 
-Projektin alussa asetin itselleni seuraavat tavoitteet:
-
-1. **Tekninen osaaminen:**
-   - Oppia käyttämään Bootstrap 5 -frameworkia tehokkaasti
-   - Ymmärtää responsiivisen suunnittelun periaatteet
-   - Hallita JSON-datan hakeminen ja käyttö JavaScriptillä
-   - Kehittää saavutettavuusosaamista
-
-2. **Käytännön taidot:**
-   - Suunnitella ja toteuttaa kokonainen verkkosivusto alusta loppuun
-   - Testata sivusto monipuolisesti eri laitteilla ja selaimilla
-   - Dokumentoida työ ammattimaisesti
-
-3. **Henkilökohtainen kehitys:**
-   - Parantaa ongelmanratkaisutaitoja
-   - Oppia projektinhallintaa
-   - Kehittää itsenäistä työskentelyä
-
-### 1.2 Tavoitteiden saavuttaminen
-
-| Tavoite | Saavutettu | Arvio | Perustelu |
-|---------|-----------|-------|-----------|
-| Bootstrap 5 hallinta | ✅ | 9/10 | Opin käyttämään gridejä, komponentteja ja utility-luokkia tehokkaasti |
-| Responsiivisuus | ✅ | 10/10 | Sivusto toimii moitteettomasti kaikilla laitteilla |
-| JSON & JavaScript | ✅ | 8/10 | Fetch API ja async/await hallinnassa, voisi syventyä enemmän |
-| Saavutettavuus | ✅ | 9/10 | WCAG AA -taso saavutettu, opin paljon uutta |
-| Projektinhallinta | ✅ | 8/10 | Aikataulu pitänyt, dokumentointi onnistunut |
-| Itsenäinen työskentely | ✅ | 9/10 | Selviydyin hyvin haasteista ja löysin ratkaisuja |
-
-**Kokonaisarvio:** Olen erittäin tyytyväinen projektiin. Saavutin kaikki asettamani tavoitteet ja opin paljon uutta.
+Tavoitteeni oli:
+- Oppia käyttämään Bootstrapia oikein
+- Tehdä sivu joka toimii sekä tietokoneella että kännykällä
+- Käyttää JavaScriptiä datan lataamiseen
+- Tehdä siisti tumma teema joka sopii bändille
 
 ---
 
-## 2. OPPIMISPROSESSIN KUVAUS
+## 2. MITÄ OPIN
 
-### 2.1 Projektin vaiheet
+### Bootstrap 5
+Tämä oli ensimmäinen kerta kun käytin Bootstrapia kunnolla. Alussa oli vähän sekavaa kun oli niin paljon erilaisia class-nimiä muistettavana (container, row, col jne.). Mutta kun luin dokumentaatiota ja kokeilin eri vaihtoehtoja, niin aloin ymmärtää miten se toimii.
+
+**Mikä oli helppoa:**
+- Valmis grid-systeemi teki sivusta responsiivisen melkein itsestään
+- Napit ja muut komponentit näyttivät hyvältä ilman omaa CSS:ää
+- Navbar oli helppo tehdä ja se muuttui automaattisesti hampurilaisvalikoksi puhelimella
+
+**Mikä oli vaikeaa:**
+- Alussa en ymmärtänyt miten breakpointit toimii (xs, sm, md, lg, xl)
+- Spacing-luokat (m-3, p-4 jne.) olivat sekavia ensin
+- Piti opetella miten Bootstrapin omia tyylejä ylikirjoitetaan omassa CSS:ssä
+
+### JavaScript ja JSON
+Käytin JavaScriptiä keikkojen ja uutisten lataamiseen JSON-tiedostoista. Tämä oli ihan uutta mulle. Opettajan antamista esimerkeistä oli paljon apua.
+
+```javascript
+fetch('data/shows.json')
+    .then(response => response.json())
+    .then(data => {
+        // Käsittele data
+    });
+```
+
+Aluksi sain koko ajan virheitä konsoliin, mutta kun opin käyttämään console.log():ia debuggaukseen, niin selvitin ongelmat. Nyt ymmärrän paremmin miten asynkroninen koodi toimii.
+
+### Responsiivisuus
+Testailin sivua jatkuvasti eri kokoisilla näytöillä. Chrome DevToolssin device toolbar oli tosi hyödyllinen tässä. Opin että ei riitä että sivu näyttää hyvältä omalla koneella - pitää testata oikeasti puhelimella ja tabletilla.
+
+Jouduin muuttamaan albumikuvien asettelua useaan kertaan että ne näyttivät hyviltä kaikilla laitteilla:
+- Tietokoneella: 3 albumia vierekkäin
+- Tabletilla: 2 albumia vierekkäin  
+- Puhelimella: 1 albumi
+
+### CSS
+Vaikka Bootstrap hoitaa paljon, niin jouduin kirjoittamaan myös omaa CSS:ää. Tein muun muassa:
+- Tumman teeman värit (musta tausta, valkoinen teksti)
+- Hero-osion taustaluvan
+- Albumikorttien hover-efektit
+- Ylimääräisiä väliä ja tyylityksiä
+
+Opin että CSS-muuttujat (--variable-name) ovat tosi käteviä kun haluaa käyttää samoja värejä monessa paikassa.
+
+---
+
+## 3. HAASTEET JA ONGELMAT
+
+### Ongelma 1: Tekstit eivät näkyneet
+Tein sivulle tumman taustan mutta unohdin vaihtaa tekstivärejä. Tilastot ja uutiskirjeen teksti olivat harmaalla ja niitä oli vaikea lukea. Ratkaisin tämän lisäämällä `text-white` luokkia ja omaa CSS:ää valkoisella värillä.
+
+### Ongelma 2: Albumikuvat cropattuina
+Halusin että koko albumikansi näkyy, mutta alussa Bootstrap leikkasi kuvia. Googletin asiaa ja löysin että `object-fit: cover` aiheutti sen. Poistin sen niin kuvat näkyvät kokonaan.
+
+### Ongelma 3: JSON ei latautunut
+Kun yritin avata HTML-tiedostoa suoraan selaimessa (file://), JavaScript ei pystynyt lataamaan JSON-tiedostoja. Sain "CORS error" -virheilmoituksen. Ratkaisu oli käynnistää paikallinen serveri Pythonilla:
+
+```
+python -m http.server 8000
+```
+
+Sen jälkeen kaikki toimi kun menin osoitteeseen http://localhost:8000
+
+### Ongelma 4: Git-ongelmat
+Kun yritin pushata sivun GitHubiin, tuli ongelmia. Olin vahingossa tehnyt repon väärään kansioon. Jouduin poistamaan vanhan repon ja tekemään uuden oikeaan paikkaan. Opin että kannattaa olla tarkkana missä kansiossa git init tehdään.
+
+---
+
+## 4. MIKÄ MENI HYVIN
+
+### Suunnittelu
+Tein ensin yksinkertaisen suunnitelman paperille mitä osioita sivulla pitää olla. Tämä auttoi paljon kun en joutunut miettimään kaikkea samaan aikaan.
+
+### Aikataulu
+Annoin itselleni realistisen aikataulun ja pysyin siinä. En jättänyt kaikkea viime tippaan vaan tein projektin vaihe kerrallaan.
+
+### Testaus
+Testasin sivua koko ajan kun tein sitä. Tämä oli hyvä idea koska huomasin ongelmat heti enkä vasta lopussa.
+
+### Ulkoasu
+Olen tyytyväinen siihen miltä sivu näyttää. Tumma teema sopii metal-bändille ja kuvat ovat hyviä. Sain myös hyvää palautetta kavereilta jotka testasivat sivua.
+
+---
+
+## 5. MITÄ TEKISIN TOISIN
+
+Jos tekisin projektin uudestaan, tekisin nämä asiat eri tavalla:
+
+1. **Käyttäisin Git alusta asti** - Nyt tein koodia jonkun aikaa ennen kuin aloin käyttää Gitiä. Olisi ollut helpompi seurata muutoksia jos olisin tehnyt committeja alusta alkaen.
+
+2. **Tekisin mobile-first suunnittelun** - Aloitin suunnittelemalla työpöytäversiota. Olisi ollut järkevämpää aloittaa mobiiliversiosta ja sitten laajentaa isommille näytöille.
+
+3. **Kirjoittaisin enemmän kommentteja koodiin** - Joskus palaan koodin pariin seuraavana päivänä enkä muista miksi tein jonkin asian tietyllä tavalla. Kommentit olisivat auttaneet.
+
+4. **Tekisin enemmän suunnitelmia paperilla** - Vaikka tein jonkin verran suunnitelmia, olisin voinut tehdä tarkempia wireframeja. Se olisi säästänyt aikaa kun en joutuisi miettimään ulkoasua samalla kun koodaan.
+
+---
+
+## 6. TULEVAISUUDEN KEHITYSIDEAT
+
+Jos jatkaisin projektin kehittämistä, lisäisin nämä ominaisuudet:
+
+- **Spotify-soitin** - Upottaisin Spotify-soittimen suoraan sivulle eikä vain linkkiä
+- **Kuvagalleria** - Lisää bändikuvia ja keikkakuvia slideshow-tyylillä
+- **Bändin jäsenet** - Oma osio jossa esitellään bändin jäsenet
+- **Englanniksi kieliversio** - Koska bändi on kansainvälinen, englanninkielinen versio olisi hyvä
+- **Dark/Light mode toggle** - Vaikka tumma teema sopii bändille, joku saattaisi haluta vaalean teeman
+
+---
+
+## 7. YHTEENVETO
+
+Tämä projekti oli todella opettavainen. Opin paljon Bootstrapista, responsiivisesta suunnittelusta ja JavaScriptistä. Tärkeintä oli että opin ratkaisemaan ongelmia itsenäisesti - kun jotain ei toiminut, googlailin ja luin dokumentaatiota kunnes löysin ratkaisun.
+
+Olen ylpeä lopputuloksesta. Sivusto näyttää ammattimaiselta ja toimii hyvin. Kaverini jotka testasivat sitä sanoivat että se näyttää "oikealta" bändisivulta.
+
+**Mitä opin tärkeimmät asiat:**
+1. Bootstrap 5 grid-systeemi ja komponentit
+2. Responsiivinen suunnittelu käytännössä
+3. JavaScript fetch ja JSON-datan käsittely
+4. Ongelmanratkaisu ja debuggaus
+5. Git version control basics
+
+**Arvosana itselleni: 8/10**
+
+En anna täyttä kymppiä koska tiedän että on vielä paljon opittavaa. Mutta olen tyytyväinen siihen mitä sain aikaan ja paljon opin tämän projektin aikana! 🎸
 
 #### Vaihe 1: Suunnittelu (2 tuntia)
 **Mitä tein:**

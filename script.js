@@ -1,4 +1,4 @@
-// Initialize AOS (Animate On Scroll)
+// AOS (Animate On Scroll) -kirjaston alustus - hoitaa scrollaus-animaatiot
 AOS.init({
     duration: 800,
     easing: 'ease-in-out',
@@ -6,7 +6,7 @@ AOS.init({
     offset: 100
 });
 
-// scrolling linkeille
+// Smooth scrolling kun klikataan navigaation linkkejä
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
             
-            // sulje monbiilimenu, jos auki
+            // Sulkee mobiilivalikon automaattisesti kun klikataan linkkiä
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarCollapse.classList.contains('show')) {
                 navbarCollapse.classList.remove('show');
@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scrollaus efetki
+// Navigointipalkin efekti kun scrollataan - muuttaa kokoa
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
@@ -45,7 +45,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Lataa tapahtumat JSON
+// Lataa keikat JSON-tiedostosta ja näyttää ne sivulla
 async function loadShows() {
     try {
         const response = await fetch('data/shows.json');
@@ -202,14 +202,14 @@ async function loadNews() {
     }
 }
 
-// Uutiskirjeen lomakkeen käsittelijä
+// Uutiskirjeen tilauslomakkeen käsittely - näyttää onnistumis-viestin
 const newsletterForm = document.querySelector('#contact form');
 if (newsletterForm) {
     newsletterForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const email = this.querySelector('input[type="email"]').value;
         
-        // Näytä onnistumisviesti
+        // Luo onnistumisviesti ja näytä se
         const successAlert = document.createElement('div');
         successAlert.className = 'alert alert-success mt-3 text-center';
         successAlert.innerHTML = `
@@ -220,14 +220,14 @@ if (newsletterForm) {
         this.appendChild(successAlert);
         this.querySelector('input[type="email"]').value = '';
         
-        // Poista ilmoitus 5 sekunnin kuluttua
+        // Piilottaa viestin 5 sekunnin jälkeen
         setTimeout(() => {
             successAlert.remove();
         }, 5000);
     });
 }
 
-// Aktiivisen navigointilinkin korostus
+// Korostaa nykyisen osion navigaatiossa kun scrollataan
 function setActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -253,26 +253,26 @@ function setActiveNavLink() {
     });
 }
 
-//  Käynnistä funktiot, kun DOM on ladattu
+// Käynnistetään kaikki funktiot kun sivu on latautunut
 document.addEventListener('DOMContentLoaded', function() {
     loadShows();
     loadNews();
     setActiveNavLink();
     
-    // Lataus animaation häivytys
+    // Fade-in efekti kun sivu latautuu
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
 });
 
-// Virheenkäsittely kuville
+// Piilottaa kuvat jos ne ei lataudu (error handling)
 document.querySelectorAll('img').forEach(img => {
     img.addEventListener('error', function() {
         this.style.display = 'none';
     });
 });
 
-// Suorituskyvyn optimointi: Kuvien laiska lataus
+// Lazy loading kuville - lataa kuvat vasta kun ne tulee näkyviin (parantaa suorituskykyä)
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

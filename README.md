@@ -1,120 +1,64 @@
-# SOULGRIND - Official Band Website
+# SOULGRIND - Bändisivusto
 
-Moderni, responsiivinen bändisivusto, joka on rakennettu Bootstrap 5 -frameworkilla.
+Tein tämän sivuston Soulgrind-bändille Bootstrap 5:llä. Sivusto toimii tietokoneella, tabletilla ja puhelimella.
 
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.2-purple)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+**Tekijä:** Miika Niemelä  
+**Päivämäärä:** 19.12.2025  
+**Kurssi:** Web-ohjelmointi
 
-## 📋 Sisällysluettelo
+## Mitä sivustolla on
 
-- [Ominaisuudet](#ominaisuudet)
-- [Teknologiat](#teknologiat)
-- [Asennus](#asennus)
-- [Käyttö](#käyttö)
-- [Projektin rakenne](#projektin-rakenne)
-- [Testaus](#testaus)
-- [Lisenssi](#lisenssi)
+- **Responsiivinen** - Toimii kaikilla laitteilla
+- **Bootstrap 5** - Käytin valmista Bootstrap-kirjastoa
+- **Keikat ja uutiset** - Ladataan JSON-tiedostoista JavaScriptillä
+- **Tumma teema** - Sopii metal-bändille hyvin
+- **Animaatiot** - Sivulla on scrollaus-animaatioita
+- **Spotify/YouTube-linkit** - Voi kuunnella musiikkia
 
-## ✨ Ominaisuudet
+## Käytetyt teknologiat
 
-- **Täysin responsiivinen** - Toimii kaikilla laitteilla (mobiilit, tabletit, työpöytä)
-- **Bootstrap 5 komponentit** - Navbar, cards, forms, grid system
-- **JSON-datan haku** - Dynaamisesti ladatut keikat ja uutiset
-- **Saavutettava** - WCAG AA -taso, 0 WAVE-virheitä
-- **Animaatiot** - AOS (Animate On Scroll) -kirjasto
-- **Moderni design** - Tumma teema, custom animaatiot
-- **SEO-optimoitu** - Semanttinen HTML ja meta-tagit
-- **Nopea** - Lighthouse-pisteet 95+
-
-## 🛠 Teknologiat
-
-### Frontend Framework & Libraries
-- **Bootstrap 5.3.2** - CSS framework
-- **Bootstrap Icons 1.11.2** - Ikonikirjasto
-- **AOS 2.3.1** - Scroll-animaatiot
-- **Google Fonts** - Bebas Neue, Roboto
-
-### Core Technologies
-- **HTML5** - Semanttinen markup
-- **CSS3** - Custom styles, animations, variables
-- **JavaScript (ES6+)** - Vanilla JS, Fetch API, async/await
-
-### Data
+- **Bootstrap 5** - Responsiivinen CSS-kirjasto
+- **HTML5** - Sivun rakenne
+- **CSS3** - Omat tyylit
+- **JavaScript** - Keikkojen ja uutisten lataus
 - **JSON** - Keikka- ja uutisdata
-- **Fetch API** - Asynkroninen datan haku
+- **Google Fonts** - Bebas Neue ja Roboto fontit
+- **AOS** - Scrollaus-animaatiot
 
-## 📦 Asennus
+## Miten saan sivuston pyörimään
 
-### Vaatimukset
-- Moderni web-selain (Chrome, Firefox, Safari, Edge)
-- Web-serveri (Python, Node.js, tai vastaava) paikalliseen kehitykseen
+### Vaihe 1: Lataa tiedostot
 
-### Asennusohjeet
-
-1. **Kloonaa repositorio**
+Kloonaa GitHubista:
 ```bash
-git clone https://github.com/yourusername/soulgrind-website.git
-cd soulgrind-website
+git clone https://github.com/azhemin/Soulgrind.git
+cd Soulgrind
 ```
 
-2. **Käynnistä paikallinen web-serveri**
+### Vaihe 2: Käynnistä serveri
 
-**Python 3:**
+Pitää käyttää serveriä että JSON-tiedostot toimii. Käytän Pythonia:
+
 ```bash
 python -m http.server 8000
 ```
 
-**Python 2:**
-```bash
-python -m SimpleHTTPServer 8000
-```
+### Vaihe 3: Avaa selaimessa
 
-**Node.js (http-server):**
-```bash
-npx http-server -p 8000
-```
-
-**PHP:**
-```bash
-php -S localhost:8000
-```
-
-3. **Avaa selaimessa**
+Mene osoitteeseen:
 ```
 http://localhost:8000/bootstrap-index.html
 ```
 
-## 🚀 Käyttö
+## Miten muokkaan sisältöä
 
-### Paikallinen kehitys
+### Keikkojen muokkaus
 
-Sivusto toimii paikallisesti HTTP-serverin kautta. JSON-tiedostot ladataan dynaamisesti `data/`-kansiosta.
-
-### Tuotantoon vienti
-
-1. **GitHub Pages:**
-   - Pushaa koodi GitHub-repositorioon
-   - Aktivoi GitHub Pages Settings-osiossa
-   - Sivu julkaistaan osoitteessa: `https://yourusername.github.io/soulgrind-website/`
-
-2. **Netlify:**
-   - Vedä ja pudota koko projekti Netlifyyn
-   - Tai yhdistä GitHub-repositorio automaattista deploymenttia varten
-
-3. **Vercel:**
-   - Tuo projekti Verceliin GitHubista
-   - Automaattinen deployment
-
-### Sisällön päivittäminen
-
-**Keikat** (`data/shows.json`):
+Muokkaa `data/shows.json` tiedostoa:
 ```json
 {
   "shows": [
     {
-      "id": 1,
       "date": "2025-01-15",
       "venue": "Tavastia",
       "city": "Helsinki",
@@ -126,171 +70,102 @@ Sivusto toimii paikallisesti HTTP-serverin kautta. JSON-tiedostot ladataan dynaa
 }
 ```
 
-**Uutiset** (`data/news.json`):
+### Uutisten muokkaus
+
+Muokkaa `data/news.json` tiedostoa:
 ```json
 {
   "news": [
     {
-      "id": 1,
-      "title": "Uusi albumi julkaistu!",
+      "title": "Uusi albumi!",
       "date": "2024-12-01",
-      "excerpt": "Lyhyt kuvaus...",
-      "content": "Pidempi sisältö...",
+      "excerpt": "Lyhyt teksti...",
+      "content": "Pidempi teksti...",
       "category": "release"
     }
   ]
 }
 ```
 
-## 📁 Projektin rakenne
+## Tiedostot
 
 ```
-soulgrind-website/
+Soulgrind/
 │
 ├── bootstrap-index.html    # Pääsivu
-├── style.css              # Custom CSS-tyylit
-├── script.js              # JavaScript-toiminnallisuudet
+├── style.css              # Omat CSS-tyylit
+├── script.js              # JavaScript-koodi
 │
-├── data/                  # JSON-datatiedostot
-│   ├── shows.json         # Keikkatiedot
+├── data/                  # JSON-tiedostot
+│   ├── shows.json         # Keikat
 │   └── news.json          # Uutiset
 │
-├── screenshots/           # Testauksen screenshotit
+├── images/                # Kuvat
+│   ├── ALBUMIT/          # Albumikannet
+│   ├── BÄNDI/            # Bändikuvat
+│   └── Soulgrind logo/   # Logo
 │
-├── TESTAUSRAPORTTI.md    # Kattava testausdokumentaatio
-├── ITSEARVIOINTI.md      # Oppimisen reflektointi
 └── README.md             # Tämä tiedosto
+
+(TESTAUSRAPORTTI ja ITSEARVIOINTI palautetaan myöhemmin Word-tiedostoina)
 ```
 
-## 🧪 Testaus
+## Testaus
 
-### Suoritettavat testit
+Testasin sivua:
+- ✅ Eri näyttöko'oilla (tietokone, tabletti, puhelin)
+- ✅ Eri selaimilla (Chrome, Firefox, Edge, Safari)
+- ✅ Kaikki linkit toimii
+- ✅ JSON-lataus toimii
+- ✅ Kuvat latautuu
 
-1. **Responsiivisuus**
-   - Testaa eri näyttöko'oilla (320px - 1920px)
-   - Käytä Chrome DevTools Device Toolbar
+Lisää tietoa testausraportissa (palautetaan Word-tiedostona erikseen)
 
-2. **Selaintestaus**
-   - Chrome
-   - Firefox
-   - Safari
-   - Edge
-   - Mobiiliselaimet (iOS Safari, Chrome Android)
+## Mitä opin
 
-3. **Saavutettavuus**
-   - [WAVE Accessibility Tool](https://wave.webaim.org/)
-   - Keyboard navigation (Tab, Enter, Esc)
-   - Screen reader (NVDA, JAWS)
+- Bootstrap 5 grid-systeemi
+- Responsiivinen suunnittelu
+- JavaScript fetch ja JSON
+- Git version control
+- Testaaminen eri laitteilla
 
-4. **Suorituskyky**
-   - Chrome Lighthouse
-   - [WebPageTest](https://www.webpagetest.org/)
-   - [GTmetrix](https://gtmetrix.com/)
+Lisää itsearvioinnissa (palautetaan Word-tiedostona erikseen)
 
-### Testausraportit
+## Värien muokkaus
 
-Katso yksityiskohtaiset testaustulokset:
-- [TESTAUSRAPORTTI.md](TESTAUSRAPORTTI.md)
-- [ITSEARVIOINTI.md](ITSEARVIOINTI.md)
-
-## 📊 Suorituskykytulokset
-
-### Lighthouse Scores (Desktop)
-- ⚡ Performance: **98/100**
-- ♿ Accessibility: **96/100**
-- ✅ Best Practices: **100/100**
-- 🔍 SEO: **100/100**
-
-### Lighthouse Scores (Mobile)
-- ⚡ Performance: **92/100**
-- ♿ Accessibility: **96/100**
-- ✅ Best Practices: **100/100**
-- 🔍 SEO: **100/100**
-
-### Core Web Vitals
-- **First Contentful Paint:** 0.8s ✅
-- **Largest Contentful Paint:** 1.5s ✅
-- **Cumulative Layout Shift:** 0.02 ✅
-- **Total Blocking Time:** 45ms ✅
-
-## ♿ Saavutettavuus
-
-- **WCAG 2.1 Level AA** -yhteensopiva
-- **0 WAVE-virheitä**
-- Semanttinen HTML5
-- ARIA-labelit interaktiivisille elementeille
-- Keyboard navigation tuki
-- Screen reader -yhteensopiva
-- Hyvät värikontrastit (4.5:1 tai parempi)
-
-## 🎨 Muokkaus
-
-### Värit
-
-Muokkaa värimaailmaa muuttamalla CSS-muuttujia `style.css`-tiedostossa:
+Jos haluat vaihtaa värejä, muokkaa `style.css` tiedoston alkua:
 
 ```css
 :root {
     --primary-color: #e74c3c;      /* Punainen */
-    --secondary-color: #2c3e50;    /* Tummansininen */
     --dark-bg: #0a0a0a;            /* Tumma tausta */
-    --darker-bg: #000000;          /* Musta */
     --light-text: #ecf0f1;         /* Vaalea teksti */
-    --accent-color: #e67e22;       /* Oranssi */
 }
 ```
 
-### Typografia
+## Ongelmat jotka ratkaisin
 
-Vaihda fontteja Google Fontsista `bootstrap-index.html`-tiedostossa:
+1. **JSON ei latautunut** - Piti käynnistää Python-serveri
+2. **Kuvat cropattuina** - Poistin height-rajoituksen
+3. **Tekstit ei näkyneet** - Lisäsin valkoisen värin
+4. **Git-ongelmat** - Tein repon uudestaan oikeaan kansioon
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=Your+Font&display=swap" rel="stylesheet">
-```
+## Tulevaisuudessa voisin lisätä
 
-Ja päivitä CSS:
-```css
-body {
-    font-family: 'Your Font', sans-serif;
-}
-```
+- Spotify-soittimen upotus
+- Bändin jäsenten esittely
+- Kuvagalleria
+- Englanniksi kieliversio
 
-## 🐛 Tunnetut ongelmat
+## Yhteystiedot
 
-- YouTube-videoiden upotukset eivät toimi `file://` protokollalla (vaatii HTTP-serverin)
-- Safari-selaimessa animaatiot voivat olla hieman hitaampia
+**Soulgrind:**
+- Facebook: https://facebook.com/SoulgrindFinland
+- YouTube: https://youtube.com/@SoulgrindOfficial
 
-## 🔮 Tulevat ominaisuudet
-
-- [ ] Spotify-soittimen upotus
-- [ ] Lisää musiikkivideoita
-- [ ] Bändin jäsenten esittelyosio
-- [ ] Dark/Light mode toggle
-- [ ] Kielivalinta (englanti)
-- [ ] Blog-osio
-- [ ] Merchandise-kauppa
-
-## 📄 Lisenssi
-
-Tämä projekti on lisensoitu MIT-lisenssillä. Katso [LICENSE](LICENSE) lisätietoja varten.
-
-## 👥 Tekijät
-
-- **[Nimesi]** - Kehitys, suunnittelu, testaus
-
-## 🙏 Kiitokset
-
-- **Bootstrap Team** - Erinomaisesta frameworkista
-- **Kurssin opettaja** - Ohjauksesta ja tuesta
-- **Web-kehitysyhteisö** - Inspiraatiosta ja resursseista
-
-## 📞 Yhteystiedot
-
-- **Email:** booking@soulgrind.fi
-- **Website:** https://yourusername.github.io/soulgrind-website/
-- **Facebook:** https://facebook.com/soulgrind
-- **Instagram:** https://instagram.com/soulgrind
+**Projekti GitHubissa:**
+- https://github.com/azhemin/Soulgrind
 
 ---
 
-**Tehty ❤️:llä ja Bootstrapilla**
+**Tehty koulutyönä 2025** 🎸
