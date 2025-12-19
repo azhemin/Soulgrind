@@ -3,376 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soulgrind - Suomalainen pagan/black metal -yhtye vuodesta 1993. 9 albumia, 3 EP:tä. Tutustu bändiin, kuuntele musiikkia ja löydä tulevat keikat.">
-    <meta name="keywords" content="Soulgrind, pagan metal, black metal, suomalainen musiikki, bändi, keikat, The Tuoni Pathway, Pakana">
-    <title>Soulgrind - Official Website</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Soulgrind - Suomalainen gothic/black metal -yhtye Helsingistä. Diskografia 1993-2010, tulevat keikat ja uutiset.">
+    <meta name="keywords" content="Soulgrind, black metal, gothic metal, Finnish metal, Inverse Records">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Soulgrind - Suomalainen Black Metal -yhtye</title>
     
-    <!-- Bootstrap 5 tyylitiedosto CDN:stä -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap ikonit -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
-    <!-- Google Fonts - käytetään Bebas Neue ja Roboto -fontteja -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Oma CSS-tiedosto -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Omat tyylit -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigointipalkki -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Navigaatio -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="images/Soulgrind logo/7414_logo.jpg" alt="Soulgrind" style="height: 40px;">
+            <a class="navbar-brand" href="#">
+                <img src="images/Soulgrind logo/7414_logo.jpg" alt="Soulgrind" height="50">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Etusivu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Bändi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#music">Musiikki</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#shows">Keikat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#news">Uutiset</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Yhteystiedot</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#hero">Etusivu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tietoa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#music">Musiikki</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#discography">Diskografia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">Uutiset</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shows">Keikat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Yhteystiedot</a></li>
                 </ul>
-                <div class="d-flex ms-3">
-                    <a href="https://www.facebook.com/SoulgrindFinland/" target="_blank" rel="noopener noreferrer" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.youtube.com/channel/UCj_TwZVSfffBO9x_fpJTqoA" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Etusivu (Hero) -->
-    <section id="home" class="hero-section">
+    <!-- Hero-osio -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
-                <div class="col-12 text-center">
-                    <h1 class="display-1 fw-bold text-white mb-4" data-aos="fade-up">SOULGRIND</h1>
-                    <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">Suomalaista pagan/black metalia vuodesta 1993</p>
-                    <button type="button" class="btn btn-primary btn-lg me-2" data-bs-toggle="modal" data-bs-target="#musicModal" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bi bi-play-circle me-2"></i>Kuuntele musiikkia
-                    </button>
-                    <a href="#shows" class="btn btn-outline-light btn-lg" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-calendar-event me-2"></i>Tulevat keikat
-                    </a>
+                <div class="col-12 text-center hero-content">
+                    <h1 class="display-1 mb-4" data-aos="fade-up">SOULGRIND</h1>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Suomalaista Gothic/Black Metalia vuodesta 1992</p>
+                    <a href="#music" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Kuuntele</a>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Music Streaming Modal -->
-    <div class="modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title" id="musicModalLabel">Kuuntele Soulgrind</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center py-4">
-                    <p class="mb-4">Valitse suoratoistopalvelu:</p>
-                    <div class="d-grid gap-3">
-                        <a href="https://open.spotify.com/artist/1DF71mqpkIUsMBtGyhKkFU" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg d-flex align-items-center justify-content-center">
-                            <i class="bi bi-spotify me-2 fs-4"></i>
-                            <span class="fs-5">Spotify</span>
-                        </a>
-                        <a href="https://tidal.com/artist/4845944" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg d-flex align-items-center justify-content-center">
-                            <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12.012 3.992L8.008 7.996 12.012 12l4.004-4.004-4.004-4.004zm0 8.016l-4.004 4.004 4.004 4.004 4.004-4.004-4.004-4.004z"/>
-                            </svg>
-                            <span class="fs-5">Tidal</span>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCj_TwZVSfffBO9x_fpJTqoA" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-lg d-flex align-items-center justify-content-center">
-                            <i class="bi bi-youtube me-2 fs-4"></i>
-                            <span class="fs-5">YouTube</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bändin tarina -osio -->
-    <section id="about" class="py-5 bg-dark">
+    <!-- Tietoa-osio -->
+    <section id="about" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="display-4 mb-4" data-aos="fade-up">Bändin tarina</h2>
-                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
-                        Soulgrind on vuonna 1993 perustettu suomalainen pagan/black metal -yhtye. Yli kahden vuosikymmenen 
-                        aikana bändi on julkaissut yhdeksän studioalbumia ja kolme EP:tä, luoden ainutlaatuisen soundin joka 
-                        yhdistää suomalaisen pakanaperinteen ja raskaiden metallisoundien voiman. Bändin musiikki ammentaa 
-                        vaikutteita black metalista, folk-musiikista ja pagan-teemoista.
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title mb-4 text-center" data-aos="fade-up">Tietoa Yhtyeestä</h2>
+                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="100">
+                        Soulgrind on suomalainen metal-yhtye Helsingistä, joka perustettiin vuonna 1992. 
+                        Yhtyeen musiikkityyli on kehittynyt vuosien varrella doom/death metalista 
+                        gothic/black metal -suuntaan, luoden ainutlaatuisen soundin joka yhdistää 
+                        synkkää tunnelmaa ja raakaa energiaa.
                     </p>
-                    <div class="row mt-5">
-                        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="stat-card">
-                                <h3 class="display-5 fw-bold text-white">1993</h3>
-                                <p class="text-white">Perustettu</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="250">
-                            <div class="stat-card">
-                                <h3 class="display-5 fw-bold text-white">9</h3>
-                                <p class="text-white">Albumia</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="stat-card">
-                                <h3 class="display-5 fw-bold text-white">3</h3>
-                                <p class="text-white">EP:tä</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="350">
-                            <div class="stat-card">
-                                <h3 class="display-5 fw-bold text-white">32</h3>
-                                <p class="text-white">Vuotta</p>
-                            </div>
-                        </div>
+                    <p class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        Yhtyeen musiikki käsittelee pakanuutta, luontoa ja pimeyttä. Soulgrind on 
+                        ollut aktiivinen yli kolme vuosikymmentä ja julkaissut lukuisia albumeita 
+                        Inverse Records -levy-yhtiön kautta. Yhtye tunnetaan vahvasta livetoiminnastaan 
+                        ja omaperäisestä lähestymistavastaan suomalaiseen metaliin.
+                    </p>
+                    
+                    <h3 class="text-primary mt-5 mb-3 text-center" data-aos="fade-up">Nykyinen Kokoonpano</h3>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <p><strong>Lord Heikkinen</strong> - Kitara, laulu</p>
+                        <p><strong>Lilith</strong> - Laulu</p>
+                        <p><strong>Azhemin</strong> - Laulu, koskettimet, kitara</p>
+                        <p><strong>JP</strong> - Bassokitara</p>
+                        <p><strong>Micko Hell</strong> - Kitara, laulu</p>
+                        <p><strong>Suntio</strong> - Rummut</p>
                     </div>
+                    <p class="text-muted mt-3 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <small>Yhtye on ollut aktiivinen vuodesta 1992 lähtien ja esiintynyt lukuisilla keikoilla ympäri Suomea.</small>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Musiikki-osio -->
-    <section id="music" class="py-5 bg-black">
+    <section id="music" class="py-5 bg-dark">
         <div class="container">
-            <h2 class="display-4 text-center mb-5" data-aos="fade-up">Musiikki</h2>
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Musiikki</h2>
             
-            <!-- Uusin single -->
-            <div class="row mb-5">
-                <div class="col-lg-10 mx-auto">
-                    <div class="card bg-dark text-white" data-aos="fade-up">
-                        <div class="card-body p-5">
-                            <div class="row align-items-center">
-                                <div class="col-md-4 text-center mb-4 mb-md-0">
-                                    <div class="album-cover">
-                                        <img src="images/AD BUCHRAM MORTEM/TEARS OF THE EARTH.jpg" alt="Tears of the Earth" class="img-fluid rounded" style="width: 100%; height: auto;">
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <span class="badge bg-primary mb-2">Uusin single</span>
-                                    <p class="text-muted mb-1">Soulgrind</p>
-                                    <h3 class="display-5 mb-3">Tears of the Earth</h3>
-                                    <p class="lead mb-4">Single - Tulevalta albumilta "Ad Buchram Mortem" (2026)</p>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <a href="https://open.spotify.com/track/6GleyKjrFT5twN7uSaC0tP" class="btn btn-success" target="_blank" rel="noopener noreferrer">
-                                            <i class="bi bi-spotify me-2"></i>Spotify
-                                        </a>
-                                        <a href="https://tidal.com/artist/4845944" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">
-                                            <i class="bi bi-music-note-beamed me-2"></i>Tidal
-                                        </a>
-                                        <a href="https://youtu.be/TfVEp2ia900" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">
-                                            <i class="bi bi-youtube me-2"></i>YouTube
-                                        </a>
-                                    </div>
-                                </div>
+            <!-- Single Info -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0 text-center" data-aos="fade-right">
+                            <img src="images/AD BUCHRAM MORTEM/TEARS OF THE EARTH.jpg" alt="Tears of the Earth" class="img-fluid rounded shadow-lg" style="max-width: 400px; width: 100%;">
+                        </div>
+                        <div class="col-md-7 text-center text-md-start" data-aos="fade-left">
+                            <h3 class="text-primary mb-3">Uusi Single: Tears of the Earth</h3>
+                            <p class="lead mb-4">
+                                Soulgrind julkaisi uuden singlen "Tears of the Earth" tulevalta 
+                                Ad Buchram Mortem -albumilta. Kappale edustaa yhtyeen synkintä ja 
+                                voimakkainta materiaalia tähän mennessä.
+                            </p>
+                            <p class="mb-4">
+                                Kuuntele single nyt suosituimmilla musiikkialustoilla:
+                            </p>
+                            <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-md-start">
+                                <a href="https://tidal.com/artist/4845944/u" target="_blank" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-music-note-list"></i> Kuuntele Tidalissa
+                                </a>
+                                <a href="https://open.spotify.com/track/6GleyKjrFT5twN7uSaC0tP?si=c5a1e9aa8e424a22" target="_blank" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-spotify"></i> Kuuntele Spotifyssa
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Music Video -->
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h4 class="text-primary text-center mb-4">Katso Musiikkivideo</h4>
+                    <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden" style="background: #000;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TfVEp2ia900?rel=0" title="Tears of the Earth - Music Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Diskografia -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="h2 mb-4 text-center" data-aos="fade-up">Diskografia</h3>
+    <!-- Diskografia-osio -->
+    <section id="discography" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Diskografia</h2>
+            
+            <div class="row g-4">
+                <!-- 1993 - Santa Sangre EP -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/SINGLE 1.jpg" class="card-img-top" alt="Santa Sangre">
+                        <div class="card-body">
+                            <h5 class="card-title">Santa Sangre</h5>
+                            <p class="card-text"><small class="text-muted">EP - 1993</small></p>
+                            <p class="card-text">Yhtyeen ensimmäinen virallinen julkaisu.</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Albumit -->
-                <div class="col-12 mb-4">
-                    <h4 class="mb-3 text-primary" data-aos="fade-up">Albumit</h4>
-                    <div class="row g-3">
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/1.jpg" class="card-img-top" alt="Soulgrind - La Matanza, El Himno Pagano">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">La Matanza, El Himno Pagano</h6>
-                                    <p class="card-text text-muted small mb-1">MMI Records (1994)</p>
-                                    <span class="badge bg-info">Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/2.jpg" class="card-img-top" alt="Soulgrind - LADIT A.D. 1999: BIHTTPOTB">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">LADIT A.D. 1999: BIHTTPOTB</h6>
-                                    <p class="card-text text-muted small mb-1">MMI Records (1995)</p>
-                                    <span class="badge bg-info">Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/3.jpg" class="card-img-top" alt="Soulgrind - Whitsongs">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">Whitsongs</h6>
-                                    <p class="card-text text-muted small mb-1">Icarus Music (1998)</p>
-                                    <span class="badge bg-info">CD, Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/4.jpg" class="card-img-top" alt="Soulgrind - Kalma">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">Kalma</h6>
-                                    <p class="card-text text-muted small mb-1">Holy Records (1999)</p>
-                                    <span class="badge bg-info">Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/5.jpg" class="card-img-top" alt="Soulgrind - Elixir Mystica">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">Elixir Mystica</h6>
-                                    <p class="card-text text-muted small mb-1">Holy Records (2001)</p>
-                                    <span class="badge bg-info">CD, Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/6.jpg" class="card-img-top" alt="Soulgrind - Into The Dark Vales Of Death">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">Into The Dark Vales Of Death</h6>
-                                    <p class="card-text text-muted small mb-1">Holy Records (2002)</p>
-                                    <span class="badge bg-info">Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/7.jpg" class="card-img-top" alt="Soulgrind - The Origins Of The Paganblood">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">The Origins Of The Paganblood</h6>
-                                    <p class="card-text text-muted small mb-1">Holy Records (2005)</p>
-                                    <span class="badge bg-info">Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/8.jpg" class="card-img-top" alt="Soulgrind - Pakana">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">Pakana</h6>
-                                    <p class="card-text text-muted small mb-1">Holy Records (2007)</p>
-                                    <span class="badge bg-info">Album</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="450">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/9.jpg" class="card-img-top" alt="Soulgrind - The Tuoni Pathway">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">The Tuoni Pathway</h6>
-                                    <p class="card-text text-muted small mb-1">Femme Metal Records (2010)</p>
-                                    <span class="badge bg-info">CD, Album</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EP:t ja singlet -->
-                <div class="col-12">
-                    <h4 class="mb-3 text-primary" data-aos="fade-up">EP:t ja singlet</h4>
-                    <div class="row g-3">
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/SINGLE 1.jpg" class="card-img-top" alt="Soulgrind - Santa Sangre">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">Santa Sangre</h6>
-                                    <p class="card-text text-muted small mb-1">MMI Records (1993)</p>
-                                    <span class="badge bg-warning text-dark">Single</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/SINGLE 2.jpg" class="card-img-top" alt="Soulgrind - Black Orchid">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">Black Orchid</h6>
-                                    <p class="card-text text-muted small mb-1">MMI Records (1994)</p>
-                                    <span class="badge bg-warning text-dark">7", EP</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-                            <div class="card bg-dark border-secondary h-100">
-                                <img src="images/ALBUMIT/SINGLE 3.jpg" class="card-img-top" alt="Soulgrind - March Butterfly">
-                                <div class="card-body">
-                                    <p class="text-muted small mb-1">Soulgrind</p>
-                                    <h6 class="card-title fw-bold">March Butterfly</h6>
-                                    <p class="card-text text-muted small mb-1">Not On Label (2010)</p>
-                                    <span class="badge bg-warning text-dark">CDr, EP, Promo</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Musiikkivideot -->
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="h2 mb-4 text-center" data-aos="fade-up">Musiikkivideot</h3>
-                </div>
-                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card bg-dark text-white h-100">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/TfVEp2ia900" 
-                                    title="Soulgrind - Tears of the Earth" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                            </iframe>
-                        </div>
+                <!-- 1994 - La matanza, el himno pagano -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/1.jpg" class="card-img-top" alt="La matanza, el himno pagano">
                         <div class="card-body">
-                            <h5 class="card-title">Tears of the Earth</h5>
-                            <p class="card-text text-muted">Official Music Video - The Tuoni Pathway</p>
+                            <h5 class="card-title">La matanza, el himno pagano</h5>
+                            <p class="card-text"><small class="text-muted">1994</small></p>
+                            <p class="card-text">Debyyttialbumi, joka aloitti Soulgrind-legendan. Raakaa doom/death metalia.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card bg-dark text-white h-100">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/pL1MwdY0qwY" 
-                                    title="Soulgrind : The Call Of The Dancing Waters" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                            </iframe>
-                        </div>
+                
+                <!-- 1994 - Black Orchid EP -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/SINGLE 2.jpg" class="card-img-top" alt="Black Orchid">
                         <div class="card-body">
-                            <h5 class="card-title">The Call Of The Dancing Waters</h5>
-                            <p class="card-text text-muted">Official Music Video</p>
+                            <h5 class="card-title">Black Orchid</h5>
+                            <p class="card-text"><small class="text-muted">EP - 1994</small></p>
+                            <p class="card-text">Musta orkidea. Varhainen EP-julkaisu.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 1995 - LADIT -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/2.jpg" class="card-img-top" alt="LADIT A.D. 1999: BIHTTPOTB">
+                        <div class="card-body">
+                            <h5 class="card-title">LADIT A.D. 1999: BIHTTPOTB</h5>
+                            <p class="card-text"><small class="text-muted">1995</small></p>
+                            <p class="card-text">Kokeellinen ja synkkä toinen albumi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/3.jpg" class="card-img-top" alt="Whitsongs">
+                        <div class="card-body">
+                            <h5 class="card-title">Whitsongs</h5>
+                            <p class="card-text"><small class="text-muted">1997</small></p>
+                            <p class="card-text">Kolmas albumi, joka kehittää yhtyeen soundia edelleen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/4.jpg" class="card-img-top" alt="Kalma">
+                        <div class="card-body">
+                            <h5 class="card-title">Kalma</h5>
+                            <p class="card-text"><small class="text-muted">1999</small></p>
+                            <p class="card-text">Synkkä ja intensiivinen albumi, joka syventää yhtyeen ilmaisua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/5.jpg" class="card-img-top" alt="Elixir Mystica">
+                        <div class="card-body">
+                            <h5 class="card-title">Elixir Mystica</h5>
+                            <p class="card-text"><small class="text-muted">2001</small></p>
+                            <p class="card-text">Mystinen ja atmosfäärinen albumi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/6.jpg" class="card-img-top" alt="Into the Dark Vales of Death">
+                        <div class="card-body">
+                            <h5 class="card-title">Into the Dark Vales of Death</h5>
+                            <p class="card-text"><small class="text-muted">2002</small></p>
+                            <p class="card-text">Pimeä matka kuoleman laaksoihin. Arvostettu albumi (75%).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/7.jpg" class="card-img-top" alt="The Origins of the Paganblood">
+                        <div class="card-body">
+                            <h5 class="card-title">The Origins of the Paganblood</h5>
+                            <p class="card-text"><small class="text-muted">2005</small></p>
+                            <p class="card-text">Pakanallisen perinnön alkuperät. Vahva paluualbumi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/8.jpg" class="card-img-top" alt="Pakana">
+                        <div class="card-body">
+                            <h5 class="card-title">Pakana</h5>
+                            <p class="card-text"><small class="text-muted">2007</small></p>
+                            <p class="card-text">Pakanallisten teemojen äärelle. Vahva ja atmosfäärinen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/9.jpg" class="card-img-top" alt="The Tuoni Pathway">
+                        <div class="card-body">
+                            <h5 class="card-title">The Tuoni Pathway</h5>
+                            <p class="card-text"><small class="text-muted">2010</small></p>
+                            <p class="card-text">Tuonen polku. Yhtyeen arvostetuin albumi (92%).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2010 - March Butterfly EP -->
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up">
+                    <div class="card album-card h-100">
+                        <img src="images/ALBUMIT/SINGLE 3.jpg" class="card-img-top" alt="March Butterfly">
+                        <div class="card-body">
+                            <h5 class="card-title">March Butterfly</h5>
+                            <p class="card-text"><small class="text-muted">EP - 2010</small></p>
+                            <p class="card-text">Maaliskuun perhonen. Promo-EP ennen The Tuoni Pathway -albumia.</p>
                         </div>
                     </div>
                 </div>
@@ -380,124 +280,112 @@
         </div>
     </section>
 
-    <!-- Keikat -osio (ladataan JSONista) -->
+    <!-- Uutiset-osio -->
+    <section id="news" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Uutiset</h2>
+            <div id="news-container" class="row g-4">
+                <!-- Uutiset ladataan JavaScriptilla -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Keikat-osio -->
     <section id="shows" class="py-5 bg-dark">
         <div class="container">
-            <h2 class="display-4 text-center mb-5" data-aos="fade-up">Tulevat keikat</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div id="showsList" class="list-group">
-                        <!-- Keikat ladataan tähän JavaScriptillä -->
-                        <div class="text-center">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Ladataan...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Tulevat Keikat</h2>
+            <div id="shows-container" class="row g-4">
+                <!-- Keikat ladataan JavaScriptilla -->
             </div>
         </div>
     </section>
 
-    <!-- Uutiset -osio (ladataan JSONista) -->
-    <section id="news" class="py-5 bg-black">
-        <div class="container">
-            <h2 class="display-4 text-center mb-5" data-aos="fade-up">Uutiset</h2>
-            <div class="row" id="newsList">
-                <!-- Uutiset ladataan tähän JavaScriptillä -->
-                <div class="col-12 text-center">
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="visually-hidden">Ladataan...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Yhteystiedot -osio -->
-    <section id="contact" class="py-5 bg-dark">
+    <!-- Yhteystiedot-osio -->
+    <section id="contact" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="display-4 mb-4" data-aos="fade-up">Yhteystiedot</h2>
-                    <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">
-                        Keikkavaraukset, mediayhteydenotot ja muut kysymykset
-                    </p>
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="section-title text-center mb-5" data-aos="fade-up">Yhteystiedot</h2>
                     
-                    <div class="row mb-5">
-                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="contact-card p-4">
-                                <i class="bi bi-envelope display-4 text-primary mb-3"></i>
-                                <h5>Sähköposti</h5>
-                                <a href="mailto:booking@soulgrind.fi" class="text-white">booking@soulgrind.fi</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="250">
-                            <div class="contact-card p-4">
-                                <i class="bi bi-telephone display-4 text-primary mb-3"></i>
-                                <h5>Puhelin</h5>
-                                <a href="tel:+358401234567" class="text-white">+358 40 123 4567</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="contact-card p-4">
-                                <i class="bi bi-geo-alt display-4 text-primary mb-3"></i>
-                                <h5>Sijainti</h5>
-                                <p class="text-white mb-0">Helsinki, Suomi</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Uutiskirje -->
-                    <div class="card bg-gradient-dark border-primary" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-body p-5">
-                            <h3 class="mb-4 text-white">Liity postituslistalle</h3>
-                            <p class="mb-4 text-white">Saat tiedon uusista julkaisuista ja tulevista keikoista</p>
-                            <form class="row g-3 justify-content-center">
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control form-control-lg" placeholder="Sähköpostiosoitteesi" required>
+                    <div class="row">
+                        <!-- Yhteydenottolomake -->
+                        <div class="col-md-7 mb-4 mb-md-0" data-aos="fade-right">
+                            <h3 class="text-primary mb-4">Lähetä viesti</h3>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nimi *</label>
+                                    <input type="text" class="form-control" id="name" required>
                                 </div>
-                                <div class="col-auto">
-                                    <button type="submit" class="btn btn-primary btn-lg">
-                                        <i class="bi bi-envelope-check me-2"></i>Tilaa
-                                    </button>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Sähköposti *</label>
+                                    <input type="email" class="form-control" id="email" required>
                                 </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Aihe</label>
+                                    <select class="form-select" id="subject">
+                                        <option value="keikka">Keikkabooking</option>
+                                        <option value="haastattelu">Haastattelu</option>
+                                        <option value="yhteistyo">Yhteistyö</option>
+                                        <option value="muu">Muu kysymys</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Viesti *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-send-fill"></i> Lähetä viesti
+                                </button>
                             </form>
                         </div>
+                        
+                        <!-- Yhteystiedot ja sosiaalinen media -->
+                        <div class="col-md-5" data-aos="fade-left">
+                            <h3 class="text-primary mb-4">Seuraa meitä</h3>
+                            <p class="mb-4">
+                                Pysy ajan tasalla uusimmista julkaisuista, keikoista ja uutisista seuraamalla meitä sosiaalisessa mediassa.
+                            </p>
+                            <div class="social-links d-flex flex-column gap-3">
+                                <a href="mailto:chopper.forever@gmail.com" class="btn btn-outline-primary btn-lg">
+                                    <i class="bi bi-envelope-fill"></i> chopper.forever@gmail.com
+                                </a>
+                                <a href="https://www.facebook.com/SoulgrindFinland/" target="_blank" class="btn btn-outline-primary btn-lg">
+                                    <i class="bi bi-facebook"></i> Facebook
+                                </a>
+                                <a href="https://open.spotify.com/artist/1DF71mqpkIUsMBtGyhKkFU" target="_blank" class="btn btn-outline-primary btn-lg">
+                                    <i class="bi bi-spotify"></i> Spotify
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCj_TwZVSfffBO9x_fpJTqoA" target="_blank" class="btn btn-outline-primary btn-lg">
+                                    <i class="bi bi-youtube"></i> YouTube
+                                </a>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h4 class="text-primary mb-3">Levy-yhtiö</h4>
+                                <p>
+                                    <strong>Inverse Records</strong><br>
+                                    <a href="https://www.inverserecords.fi" target="_blank" class="text-primary">www.inverserecords.fi</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (sivun alaosa) -->
-    <footer class="bg-black text-center py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0">&copy; 2025 Soulgrind. Kaikki oikeudet pidätetään.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="https://www.facebook.com/SoulgrindFinland/" target="_blank" rel="noopener noreferrer" class="text-white me-3" aria-label="Facebook">
-                        <i class="bi bi-facebook fs-4"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCj_TwZVSfffBO9x_fpJTqoA" target="_blank" rel="noopener noreferrer" class="text-white me-3" aria-label="YouTube">
-                        <i class="bi bi-youtube fs-4"></i>
-                    </a>
-                    <a href="https://open.spotify.com" class="text-white" aria-label="Spotify">
-                        <i class="bi bi-spotify fs-4"></i>
-                    </a>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Soulgrind. Kaikki oikeudet pidätetään.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JS -->
+    <!-- Oma JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

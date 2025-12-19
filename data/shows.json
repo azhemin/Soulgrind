@@ -1,58 +1,58 @@
-{
-  "shows": [
+[
     {
-      "id": 1,
-      "date": "2025-01-15",
-      "venue": "Tavastia",
-      "city": "Helsinki",
-      "country": "Suomi",
-      "ticketUrl": "https://www.tiketti.fi",
-      "status": "tickets-available"
+        "paivays": "25.1.2025",
+        "paikka": "On The Rocks",
+        "kaupunki": "Helsinki",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
     },
     {
-      "id": 2,
-      "date": "2025-02-03",
-      "venue": "Pakkahuone",
-      "city": "Tampere",
-      "country": "Suomi",
-      "ticketUrl": "https://www.tiketti.fi",
-      "status": "tickets-available"
+        "paivays": "8.2.2025",
+        "paikka": "Pakkahuone",
+        "kaupunki": "Tampere",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
     },
     {
-      "id": 3,
-      "date": "2025-02-17",
-      "venue": "Klubi",
-      "city": "Turku",
-      "country": "Suomi",
-      "ticketUrl": "https://www.tiketti.fi",
-      "status": "almost-sold-out"
+        "paivays": "22.2.2025",
+        "paikka": "Klubi",
+        "kaupunki": "Turku",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
     },
     {
-      "id": 4,
-      "date": "2025-03-08",
-      "venue": "Bar Loose",
-      "city": "Jyväskylä",
-      "country": "Suomi",
-      "ticketUrl": "https://www.tiketti.fi",
-      "status": "tickets-available"
+        "paivays": "15.3.2025",
+        "paikka": "Bar Loose",
+        "kaupunki": "Jyväskylä",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
     },
     {
-      "id": 5,
-      "date": "2025-03-22",
-      "venue": "Rytmikorjaamo",
-      "city": "Seinäjoki",
-      "country": "Suomi",
-      "ticketUrl": "https://www.tiketti.fi",
-      "status": "tickets-available"
+        "paivays": "29.3.2025",
+        "paikka": "Telakka",
+        "kaupunki": "Tampere",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
     },
     {
-      "id": 6,
-      "date": "2025-04-12",
-      "venue": "Virgin Oil Co.",
-      "city": "Oulu",
-      "country": "Suomi",
-      "ticketUrl": "https://www.tiketti.fi",
-      "status": "tickets-available"
+        "paivays": "12.4.2025",
+        "paikka": "Virgin Oil Co.",
+        "kaupunki": "Oulu",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
+    },
+    {
+        "paivays": "26.4.2025",
+        "paikka": "Ravintola Saapas",
+        "kaupunki": "Joensuu",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
+    },
+    {
+        "paivays": "10.5.2025",
+        "paikka": "Black Circle",
+        "kaupunki": "Helsinki",
+        "maa": "Suomi",
+        "lippu": "https://www.tiketti.fi"
     }
-  ]
-}
+]

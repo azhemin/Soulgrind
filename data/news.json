@@ -1,40 +1,32 @@
-{
-  "news": [
+[
     {
-      "id": 1,
-      "title": "Uusi EP julkaistu!",
-      "date": "2010-03-15",
-      "excerpt": "March Butterfly EP on nyt saatavilla. Uutta materiaalia The Tuoni Pathway -albumin jälkeen.",
-      "content": "Olemme innoissamme ilmoittaaksemme uuden March Butterfly EP:n julkaisusta! Tämä promo-EP sisältää tuoretta materiaalia ja näyttää bändin uutta suuntaa.",
-      "category": "release",
-      "image": "album-cover.jpg"
+        "otsikko": "Uusi single 'Jylhä metsämies' julkaistu",
+        "paivays": "15.03.2025",
+        "sisalto": "Soulgrind julkaisi uuden singlen 'Jylhä metsämies' Inverse Records -levy-yhtiön kautta. Single antaa esimakua yhtyeen tulevasta materiaalista."
     },
     {
-      "id": 2,
-      "title": "Kevään kiertue julkistettu",
-      "date": "2024-11-15",
-      "excerpt": "Soulgrind kiertää Suomea keväällä 2025 - liput nyt myynnissä!",
-      "content": "Olemme ylpeitä julkaistessamme kevään 2025 kiertueemme. Kiertueen aikana vierailemme kuudessa kaupungissa ympäri Suomea esitellen uutta albumiamme livenä.",
-      "category": "tour",
-      "image": "tour-poster.jpg"
+        "otsikko": "Tulossa: Uusi albumi 'Ad Buchram Mortem' 2026",
+        "paivays": "19.12.2025",
+        "sisalto": "Soulgrind työstää parhaillaan uutta albumia 'Ad Buchram Mortem', joka julkaistaan vuonna 2026 Inverse Records -levy-yhtiön kautta. Albumi jatkaa yhtyeen pakanallisten teemojen käsittelyä."
     },
     {
-      "id": 3,
-      "title": "Musiikkivideo: Tears of the Earth",
-      "date": "2024-10-20",
-      "excerpt": "Uusi sinkkujulkaisu tulevalta Ad Buchram Mortem -albumilta!",
-      "content": "Tears of the Earth on ensimmäinen sinkkujulkaisu tulevalta Ad Buchram Mortem -albumilta, joka julkaistaan vuonna 2026. Tämä voimakas kappale antaa esimakua bändin uudesta suunnasta ja tulevasta materiaalista.",
-      "category": "video",
-      "image": "tears-of-the-earth-video.jpg"
+        "otsikko": "30 vuotta suomalaista metallia",
+        "paivays": "12.03.2022",
+        "sisalto": "Soulgrind juhlii perustamisestaan 30 vuotta. Helsinkiläinen yhtye on toiminut vuodesta 1992 lähtien ja julkaissut yhdeksän täyspitkää albumia uransa aikana."
     },
     {
-      "id": 4,
-      "title": "Bändi festivalikesän kiinnityksissä",
-      "date": "2024-09-10",
-      "excerpt": "Soulgrind esiintyy useilla festivaaleilla kesällä 2025",
-      "content": "Olemme iloisia voidessamme kertoa, että meidät on vahvistettu esiintymään useilla suomalaisilla festivaaleilla tulevana kesänä. Lisätietoja julkaistaan pian!",
-      "category": "announcement",
-      "image": "festival-announcement.jpg"
+        "otsikko": "The Tuoni Pathway -albumi täyttää 15 vuotta",
+        "paivays": "08.11.2025",
+        "sisalto": "Yhtyeen arvostetuin albumi The Tuoni Pathway täyttää 15 vuotta. Vuonna 2010 julkaistu albumi sai erinomaiset arvostelut ja pidetään yhtyeen parhaana teoksena."
+    },
+    {
+        "otsikko": "March Butterfly -EP 15 vuotta sitten",
+        "paivays": "22.03.2025",
+        "sisalto": "Soulgrind muistelee March Butterfly -EP:tä, joka julkaistiin vuonna 2010 ennen The Tuoni Pathway -albumia. EP toimi promomateriaalina tulevalle albumille."
+    },
+    {
+        "otsikko": "Yhtye aktiivisena Inverse Recordsilla",
+        "paivays": "05.09.2024",
+        "sisalto": "Soulgrind jatkaa yhteistyötään Inverse Records -levy-yhtiön kanssa. Helsinkiläinen doom/death ja gothic/black metal -yhtye on ollut aktiivinen vuodesta 1992 lähtien."
     }
-  ]
-}
+]
