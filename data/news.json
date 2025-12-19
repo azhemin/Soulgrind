@@ -1,0 +1,40 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Uusi EP julkaistu!",
+      "date": "2010-03-15",
+      "excerpt": "March Butterfly EP on nyt saatavilla. Uutta materiaalia The Tuoni Pathway -albumin jälkeen.",
+      "content": "Olemme innoissamme ilmoittaaksemme uuden March Butterfly EP:n julkaisusta! Tämä promo-EP sisältää tuoretta materiaalia ja näyttää bändin uutta suuntaa.",
+      "category": "release",
+      "image": "album-cover.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Kevään kiertue julkistettu",
+      "date": "2024-11-15",
+      "excerpt": "Soulgrind kiertää Suomea keväällä 2025 - liput nyt myynnissä!",
+      "content": "Olemme ylpeitä julkaistessamme kevään 2025 kiertueemme. Kiertueen aikana vierailemme kuudessa kaupungissa ympäri Suomea esitellen uutta albumiamme livenä.",
+      "category": "tour",
+      "image": "tour-poster.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Musiikkivideo: Tears of the Earth",
+      "date": "2024-10-20",
+      "excerpt": "Uusi sinkkujulkaisu tulevalta Ad Buchram Mortem -albumilta!",
+      "content": "Tears of the Earth on ensimmäinen sinkkujulkaisu tulevalta Ad Buchram Mortem -albumilta, joka julkaistaan vuonna 2026. Tämä voimakas kappale antaa esimakua bändin uudesta suunnasta ja tulevasta materiaalista.",
+      "category": "video",
+      "image": "tears-of-the-earth-video.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Bändi festivalikesän kiinnityksissä",
+      "date": "2024-09-10",
+      "excerpt": "Soulgrind esiintyy useilla festivaaleilla kesällä 2025",
+      "content": "Olemme iloisia voidessamme kertoa, että meidät on vahvistettu esiintymään useilla suomalaisilla festivaaleilla tulevana kesänä. Lisätietoja julkaistaan pian!",
+      "category": "announcement",
+      "image": "festival-announcement.jpg"
+    }
+  ]
+}

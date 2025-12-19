@@ -1,0 +1,58 @@
+{
+  "shows": [
+    {
+      "id": 1,
+      "date": "2025-01-15",
+      "venue": "Tavastia",
+      "city": "Helsinki",
+      "country": "Suomi",
+      "ticketUrl": "https://www.tiketti.fi",
+      "status": "tickets-available"
+    },
+    {
+      "id": 2,
+      "date": "2025-02-03",
+      "venue": "Pakkahuone",
+      "city": "Tampere",
+      "country": "Suomi",
+      "ticketUrl": "https://www.tiketti.fi",
+      "status": "tickets-available"
+    },
+    {
+      "id": 3,
+      "date": "2025-02-17",
+      "venue": "Klubi",
+      "city": "Turku",
+      "country": "Suomi",
+      "ticketUrl": "https://www.tiketti.fi",
+      "status": "almost-sold-out"
+    },
+    {
+      "id": 4,
+      "date": "2025-03-08",
+      "venue": "Bar Loose",
+      "city": "Jyväskylä",
+      "country": "Suomi",
+      "ticketUrl": "https://www.tiketti.fi",
+      "status": "tickets-available"
+    },
+    {
+      "id": 5,
+      "date": "2025-03-22",
+      "venue": "Rytmikorjaamo",
+      "city": "Seinäjoki",
+      "country": "Suomi",
+      "ticketUrl": "https://www.tiketti.fi",
+      "status": "tickets-available"
+    },
+    {
+      "id": 6,
+      "date": "2025-04-12",
+      "venue": "Virgin Oil Co.",
+      "city": "Oulu",
+      "country": "Suomi",
+      "ticketUrl": "https://www.tiketti.fi",
+      "status": "tickets-available"
+    }
+  ]
+}
