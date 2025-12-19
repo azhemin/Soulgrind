@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOULGRIND - Official Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #000;
+            padding: 20px 0;
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #999;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #999;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .album-section {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .album-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .album-title {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #ccc;
+        }
+
+        .album-link {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #1db954;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 30px 0;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .album-link:hover {
+            background-color: #1ed760;
+        }
+
+        .video-section {
+            margin: 60px 0;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .video-item {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .video-item h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            min-height: 315px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .video-description {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #999;
+            text-align: left;
+        }
+
+        .newsletter-section {
+            background-color: #111;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .newsletter-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .newsletter-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #222;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .newsletter-form button {
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #ccc;
+        }
+
+        footer {
+            background-color: #000;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 2px solid #333;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: #333;
+            margin: 60px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .album-section h2 {
+                font-size: 28px;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">SOULGRIND</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#shows">SHOWS</a></li>
+                    <li><a href="#band">BAND</a></li>
+                    <li><a href="#bio">BIO</a></li>
+                    <li><a href="#media">MEDIA</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="http://www.facebook.com/soulgrind" target="_blank">f</a>
+                <a href="http://youtube.com/user/soulgrind" target="_blank">▶</a>
+                <a href="http://instagram.com/soulgrind" target="_blank">📷</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>SOULGRIND</h1>
+    </div>
+
+    <main class="main-content">
+        <section class="album-section">
+            <h2>OUT NOW!</h2>
+            <p class="album-title">As Buhcram Mortem</p>
+            <p class="album-title">Ad Buchram Mortem 2LP (WHITE BLACK MARBLE)</p>
+            <a href="https://open.spotify.com/album/5Rf3QTxZ42Lghe4pgIxc2o?si=rLjVKZOjSN6SM2dbMBSEgA" class="album-link" target="_blank">LISTEN TO THE FULL ALBUM HERE</a>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="video-section" id="media">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 40px; letter-spacing: 2px;">MUSIC VIDEOS</h2>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                                src="https://www.youtube.com/embed/TfVEp2ia900" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>SOULGRIND - Overworld (OFFICIAL MUSIC VIDEO)</h3>
+                    <div class="video-description">
+                        <p>Official music video of @soulgrind's single "Overworld"! New album 'The Singularity (Phase II - Xenotaph)' is out now.</p>
+                        <p><strong>Subscribe to Soulgrind:</strong> http://bit.ly/subs-scrsym-yt</p>
+                        <p><strong>Subscribe to Nuclear Blast:</strong> https://nblast.de/NBytb</p>
+                        <p><strong>Follow Soulgrind:</strong></p>
+                        <p>Instagram: https://www.instagram.com/soulgrind</p>
+                        <p>Facebook: https://www.facebook.com/soulgrind</p>
+                        <p>Website: https://www.soulgrindofficial.com</p>
+                        <p>Created by Wayne Joyner & David Letelier</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-placeholder">▶ VIDEO</div>
+                    <h3>SOULGRIND - Chrononautilus (OFFICIAL MUSIC VIDEO)</h3>
+                    <div class="video-description">
+                        <p>Official music video for Chrononautilus by @soulgrind! New album 'The Singularity (Phase II - Xenotaph)' out now via Nuclear Blast Records.</p>
+                        <p><strong>Order & Listen the album at:</strong> https://soulgrind.bfan.link/xenotaph.yde</p>
+                        <p><strong>Listen to this song:</strong> https://soulgrind.bfan.link/chrononautilus.yde</p>
+                        <p><strong>Subscribe to Soulgrind:</strong> http://bit.ly/subs-scrsym-yt</p>
+                        <p><strong>Subscribe to Nuclear Blast:</strong> https://nblast.de/NBytb</p>
+                        <p><strong>Follow Soulgrind:</strong></p>
+                        <p>Instagram: https://www.instagram.com/soulgrind</p>
+                        <p>Facebook: https://www.facebook.com/soulgrind</p>
+                        <p>Website: https://www.soulgrindofficial.com</p>
+                        <p>Created by Wayne Joyner & David Letelier</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-placeholder">▶ VIDEO</div>
+                    <h3>SOULGRIND - Scorched Quadrant (OFFICIAL MUSIC VIDEO)</h3>
+                    <div class="video-description">
+                        <p>Official music video for "Scorched Quadrant" by @soulgrind. New album 'The Singularity (Phase II - Xenotaph)' out now via Nuclear Blast Records.</p>
+                        <p><strong>Order & Listen the album at:</strong> https://soulgrind.bfan.link/xenotaph.yde</p>
+                        <p><strong>Listen to this song:</strong> https://soulgrind.bfan.link/scorched-quadrant.yde</p>
+                        <p><strong>Subscribe to Soulgrind:</strong> http://bit.ly/subs-scrsym-yt</p>
+                        <p><strong>Subscribe to Nuclear Blast:</strong> https://nblast.de/NBytb</p>
+                        <p><strong>Follow Soulgrind:</strong></p>
+                        <p>Instagram: https://www.instagram.com/soulgrind</p>
+                        <p>Facebook: https://www.facebook.com/soulgrind</p>
+                        <p>Website: https://www.soulgrindofficial.com</p>
+                        <p>Directed by Owe Lingvall and Konstantin Smirnov</p>
+                        <p>Animations VFX by Konstantin Smirnov</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-placeholder">▶ VIDEO</div>
+                    <h3>SOULGRIND - Ascension Chamber (OFFICIAL MUSIC VIDEO)</h3>
+                    <div class="video-description">
+                        <p>Official Music Video, Ascension Chamber by Soulgrind.</p>
+                        <p><strong>Listen and Order at:</strong> https://soulgrind.bfan.link/dark-matter-dimensions.yde</p>
+                        <p><strong>SUBSCRIBE to Soulgrind:</strong> http://bit.ly/subs-scrsym-yt</p>
+                        <p><strong>SUBSCRIBE to Nuclear Blast:</strong> http://bit.ly/subs-nb-yt</p>
+                        <p><strong>From the album, Dark Matter Dimensions</strong></p>
+                        <p>Out on October 2, 2009 (Europe) and October 20, 2009 (North America)</p>
+                        <p><strong>Facebook:</strong> https://www.facebook.com/soulgrind</p>
+                        <p><strong>Instagram:</strong> https://www.instagram.com/soulgrind</p>
+                        <p><strong>Twitter:</strong> https://twitter.com/ScarSymmetry</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-placeholder">▶ VIDEO</div>
+                    <h3>SOULGRIND - Limits To Infinity (OFFICIAL LYRIC VIDEO)</h3>
+                    <div class="video-description">
+                        <p>SOULGRIND's 'Limits To Infinity' is taken from "THE SINGULARITY (PHASE I - NEOHUMANITY).</p>
+                        <p><strong>Order the album here:</strong> http://smarturl.it/Soulgrind-NB</p>
+                        <p><strong>SUBSCRIBE to Nuclear Blast:</strong> http://bit.ly/subs-nb-yt</p>
+                        <p><strong>SUBSCRIBE to Soulgrind:</strong> http://bit.ly/subs-scrsym-yt</p>
+                        <p><strong>FOLLOW SOULGRIND:</strong></p>
+                        <p>Like: https://www.facebook.com/soulgrind</p>
+                        <p>Follow: https://twitter.com/Soulgrind</p>
+                        <p>Watch: http://bit.ly/subs-scrsym-yt</p>
+                        <p>"The Singularity (Phase I – Neohumanity)" is out now via Nuclear Blast Records.</p>
+                        <p>"The Singularity (Phase I – Neohumanity)" is the first part of a trilogy.</p>
+                        <p><strong>Per Nilsson comments:</strong> "I thought to myself... am I allowed to fuse death metal with AOR, and go extreme in both directions? I didn't ask for permission, I just went and did it, and I'm pretty excited to hear what people are gonna think about it."</p>
+                        <p><strong>Henrik Ohlsson adds:</strong> "Limits to Infinity" unveils the malevolent plan of the elite, the hidden hand, and their discoveries regarding the secrets of the universe. The lyric elaborates on the decision makers' long-term plan to merge with machines and colonize other planets."</p>
+                        <p><strong>Track listing of "The Singularity (Phase I – Neohumanity)":</strong></p>
+                        <p>01. The Shape Of Things To Come</p>
+                        <p>02. Neohuman</p>
+                        <p>03. Limits To Infinity</p>
+                        <p>04. Cryonic Harvest</p>
+                        <p>05. The Spiral Timeshift</p>
+                        <p>06. Children Of The Integrated Circuit</p>
+                        <p>07. Neuromancers</p>
+                        <p>08. Technocalyptic Cybergeddon</p>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-placeholder">▶ VIDEO</div>
+                    <h3>SOULGRIND - Noumenon And Phenomenon (OFFICIAL VIDEO)</h3>
+                    <div class="video-description">
+                        <p><strong>JOIN US ON PATREON!</strong> http://www.patreon.com/soulgrind</p>
+                        <p>Official Video Noumenon and Phenomenon Soulgrind</p>
+                        <p><strong>SUBSCRIBE to Soulgrind:</strong> http://bit.ly/subs-scrsym-yt</p>
+                        <p><strong>SUBSCRIBE to Nuclear Blast:</strong> http://bit.ly/subs-nb-yt</p>
+                        <p><strong>From the album, Dark Matter Dimensions</strong></p>
+                        <p>Out October 2, 2009 (Europe) and October 20, 2009 (North America)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="newsletter-section">
+            <h2>JOIN OUR MAILING LIST</h2>
+            <p>AND NEVER MISS AN UPDATE</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email here *" required>
+                <button type="submit">SUBSCRIBE NOW</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 / Heavy Metal Heart Agency</p>
+        <p><a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
