@@ -1,254 +1,243 @@
-# Soulgrind - Official Website
+# Soulgrind - Nettisivut
 
-Modern, responsive website for Finnish gothic/black metal band Soulgrind. Built from scratch with Bootstrap 5 framework.
+Soulgrind-bändin uudet kotisivut. Tein nämä alusta asti käyttäen Bootstrap 5:ttä.
 
-## 🎸 About The Project
+## Mitä tässä on
 
-This is a complete redesign of Soulgrind's official band website, featuring their discography, upcoming shows, news, and contact information. The site showcases 30+ years of Finnish metal history with a dark, atmospheric design that matches the band's aesthetic.
+Tämä on Soulgrindin uudet kotisivut missä on kaikki oleellinen: diskografia, keikat, uutiset ja yhteystiedot. Yritin saada tummasta ja tyylikkäästä ulkoasusta joka sopii bändin tyyliin.
 
-## 🛠️ Technologies Used
+## Käytetyt teknologiat
 
-### Frontend Stack
-- **HTML5** - Semantic markup structure
-- **CSS3** - Custom styling with CSS variables
-- **JavaScript (ES6)** - Dynamic content loading
-- **Bootstrap 5.3.2** - Responsive grid and components
-- **Bootstrap Icons 1.11.1** - Icon library
-- **AOS 2.3.1** - Scroll animation library
+- **HTML5** - Perussivurakenne
+- **CSS3** - Tyylit ja ulkoasu
+- **JavaScript** - Dynaaminen sisältö
+- **Bootstrap 5.3.2** - Responsiivinen layout
+- **Bootstrap Icons** - Ikonit
+- **AOS 2.3.1** - Scroll-animaatiot
 
-### Fonts
-- **Cinzel** (Google Fonts) - Headlines
-- **Roboto** (Google Fonts) - Body text
+### Fontit
+- **Cinzel** - Otsikot (Google Fonts)
+- **Roboto** - Leipäteksti (Google Fonts)
 
-### Design Features
-- Dark theme with gold accents (#8a7028)
-- Fully responsive layout (mobile-first)
-- Smooth scroll navigation
-- Lazy-loaded YouTube embed
-- Dynamic JSON data loading
+### Ominaisuudet
+- Tumma teema kultaisilla korostuksilla
+- Responsiivinen (toimii kännykällä, tabletilla ja tietokoneella)
+- Smooth scroll
+- YouTube video
+- JSON-datasta ladataan uutiset ja keikat
 
-## 📁 Project Structure
+## Tiedostorakenne
 
 ```
 Autius/
-├── bootstrap-index.html    # Main HTML file
-├── style.css              # Custom styles
-├── script.js              # JavaScript functionality
+├── bootstrap-index.html    # Pääsivu
+├── style.css              # Tyylit
+├── script.js              # JavaScript-toiminnot
 ├── data/
-│   ├── news.json         # News feed data
-│   └── shows.json        # Concert dates data
+│   ├── news.json         # Uutiset
+│   └── shows.json        # Keikkapäivät
 ├── images/
-│   ├── ALBUMIT/          # Album covers (1-9.jpg, SINGLE 1-3.jpg)
-│   ├── BÄNDI/            # Band photos
-│   ├── Soulgrind logo/   # Band logo
-│   └── AD BUCHRAM MORTEM/ # Upcoming album artwork
+│   ├── ALBUMIT/          # Albumien kansikuvat
+│   ├── BÄNDI/            # Bändikuvat
+│   ├── Soulgrind logo/   # Logo
+│   └── AD BUCHRAM MORTEM/ # Tulevan albumin kuvat
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Miten tämä toimii
 
-### Prerequisites
-- Python 3.x (for local server)
-- Modern web browser (Chrome, Firefox, Edge, Safari)
+### Tarvitset
+- Python 3 (serverin pyörittämiseen)
+- Selaimen (Chrome, Firefox, Edge, Safari)
 
-### Running Locally
+### Käynnistys
 
-1. Clone the repository:
+1. Kloonaa repo:
 ```bash
 git clone https://github.com/azhemin/Soulgrind.git
 cd Soulgrind
 ```
 
-2. Start a local HTTP server:
+2. Käynnistä serveri:
 ```bash
 python -m http.server 8000
 ```
 
-3. Open your browser and navigate to:
+3. Avaa selaimessa:
 ```
 http://localhost:8000/bootstrap-index.html
 ```
 
-**Note:** A local server is required for JSON data loading due to CORS restrictions.
+**Huom:** Serveri on pakollinen että JSON-datat latautuu oikein.
 
-## 📄 Page Sections
+## Sivun osiot
 
-### 1. Hero Section
-- Full-screen hero image with band photo
-- Call-to-action button linking to music section
-- Responsive typography
+### 1. Etusivu (Hero)
+- Isokokoinen bändikuva
+- "Kuuntele" -nappi joka vie musiikkiin
+- Toimii kaikilla näyttökoilla
 
-### 2. About Section
-- Band history and background (established 1992)
-- Current lineup with member names and instruments
-- Evolution from doom/death to gothic/black metal
+### 2. Tietoa yhtyeestä
+- Bändin historia (perustettu 1992 Helsingissä)
+- Nykyinen kokoonpano
+- Musiikkityyli: doom/death → gothic/black metal
 
-### 3. Music Section
-- Featured single: "Tears of the Earth"
-- Direct links to Tidal and Spotify
-- Embedded YouTube music video
-- Album artwork showcase
+### 3. Musiikki
+- Uusin sinkku: "Tears of the Earth"
+- Linkit Tidaliin ja Spotifyhin
+- YouTube-video
+- Kansikuva
 
-### 4. Discography
-- Complete chronological discography (1993-2010)
-- 9 full-length albums
-- 3 EPs
-- Responsive card layout (6 per row on desktop)
-- Album covers with release years
+### 4. Diskografia
+- Kaikki julkaisut aikajärjestyksessä (1993-2010)
+- 9 täyspitkää albumia
+- 3 EP:tä
+- Näyttää 6 albumia per rivi tietokoneella
 
-### 5. News Section
-- Dynamic news feed loaded from JSON
-- Latest releases and announcements
-- Band updates and milestones
+### 5. Uutiset
+- Ladataan JSON-tiedostosta
+- Uusimmat julkaisut ja tiedotteet
 
-### 6. Upcoming Shows
-- Concert calendar loaded from JSON
-- Venue and city information
-- Ticket purchase links
+### 6. Tulevat keikat
+- Keikkakalenteri JSON-tiedostosta
+- Paikka ja kaupunki
+- Linkki lippuihin
 
-### 7. Contact Section
-- Contact form (Name, Email, Subject, Message)
-- Social media links (Facebook, Spotify, YouTube)
-- Email: chopper.forever@gmail.com
-- Record label information (Inverse Records)
+### 7. Yhteystiedot
+- Yhteydenottolomake
+- Somet (Facebook, Spotify, YouTube)
+- Sähköposti: chopper.forever@gmail.com
+- Levy-yhtiö: Inverse Records
 
-## 🎨 Design Choices
+## Ulkoasu
 
-### Color Palette
-- **Primary Gold**: #8a7028 (buttons, accents)
-- **Hover Gold**: #9d7f30
-- **Dark Background**: #0a0a0a
-- **Secondary Dark**: #2c2c2c
-- **Light Text**: #f5f5f5
+### Värit
+- **Kulta**: #e6c550 (painikkeet, aksentit)
+- **Tummempi kulta**: #c9a445
+- **Tumma tausta**: #0a0a0a
+- **Vaalea teksti**: #ffffff
+- WCAG AA yhteensopiva (hyvä kontrasti)
 
-### Typography Hierarchy
-- **H1-H6**: Cinzel serif font (metal aesthetic)
-- **Body**: Roboto sans-serif (readability)
-- **Letter spacing**: Increased for dramatic effect
+### Fontit
+- **Otsikot**: Cinzel (metallinen tyyli)
+- **Teksti**: Roboto (helppolukuinen)
 
-### Responsive Breakpoints
-- **Mobile**: < 576px (2 albums per row)
-- **Tablet**: 576-991px (3 albums per row)
-- **Desktop**: > 992px (6 albums per row)
+### Responsiivisuus
+- **Kännykkä**: < 576px (2 albumia rivillä)
+- **Tabletti**: 576-991px (3 albumia rivillä)
+- **Kone**: > 992px (6 albumia rivillä)
 
-## 📊 Data Management
+##  Datan muokkaus
 
-### Adding News Items
-Edit `data/news.json`:
+### Uutisten lisäys
+Muokkaa `data/news.json`:
 ```json
 [
   {
-    "title": "News headline",
+    "title": "Otsikko",
     "date": "DD.MM.YYYY",
-    "content": "News content..."
+    "content": "Uutisen sisältö..."
   }
 ]
 ```
 
-### Adding Concert Dates
-Edit `data/shows.json`:
+### Keikkojen lisäys
+Muokkaa `data/shows.json`:
 ```json
 [
   {
     "date": "DD.MM.YYYY",
-    "venue": "Venue Name",
-    "city": "City",
-    "tickets": "https://ticketlink.com"
+    "venue": "Paikan nimi",
+    "city": "Kaupunki",
+    "tickets": "https://lippulinkki.fi"
   }
 ]
 ```
 
-## 🔗 External Links
+##  Linkit
 
-### Streaming Platforms
-- **Spotify**: [Artist Page](https://open.spotify.com/artist/1DF71mqpkIUsMBtGyhKkFU)
-- **Tidal**: [Artist Page](https://tidal.com/artist/4845944/u)
-- **YouTube**: [Channel](https://www.youtube.com/channel/UCj_TwZVSfffBO9x_fpJTqoA)
+### Striimauspalvelut
+- **Spotify**: [Soulgrind](https://open.spotify.com/artist/1DF71mqpkIUsMBtGyhKkFU)
+- **Tidal**: [Soulgrind](https://tidal.com/artist/4845944/u)
+- **YouTube**: [Kanava](https://www.youtube.com/channel/UCj_TwZVSfffBO9x_fpJTqoA)
 
-### Social Media
+### Somet
 - **Facebook**: [SoulgrindFinland](https://www.facebook.com/SoulgrindFinland/)
 
-### Record Label
-- **Inverse Records**: [Website](https://www.inverserecords.fi)
+### Levy-yhtiö
+- **Inverse Records**: [inverserecords.fi](https://www.inverserecords.fi)
 
-## 🎵 Discography Timeline
+##  Diskografia
 
-**EPs:**
+**EP:t:**
 - Santa Sangre (1993)
 - Black Orchid (1994)
 - March Butterfly (2010)
 
-**Full-Length Albums:**
+**Albumit:**
 1. La matanza, el himno pagano (1994)
 2. LADIT A.D. 1999: BIHTTPOTB (1995)
 3. Whitsongs (1997)
 4. Kalma (1999)
 5. Elixir Mystica (2001)
-6. Into the Dark Vales of Death (2002 - 75% rating)
+6. Into the Dark Vales of Death (2002)
 7. The Origins of the Paganblood (2005)
 8. Pakana (2007)
-9. The Tuoni Pathway (2010 - 92% rating)
+9. The Tuoni Pathway (2010)
 
-**Upcoming:**
+**Tulossa:**
 - Ad Buchram Mortem (2026)
 
-## 👥 Current Lineup
+##  Kokoonpano
 
-- **Lord Heikkinen** - Vocals
-- **Lilith** - Guitar
-- **Azhemin** - Guitar
-- **JP** - Bass
-- **Micko Hell** - Drums
-- **Suntio** - Keyboards
+- **Lord Heikkinen** - Laulu
+- **Lilith** - Kitara
+- **Azhemin** - Kitara
+- **JP** - Basso
+- **Micko Hell** - Rummut
+- **Suntio** - Koskettimet
 
-## 🌐 Deployment
+##  Julkaisu
 
 ### GitHub Pages
-The site is deployed via GitHub Pages:
-- Repository: `github.com/azhemin/Soulgrind`
-- Branch: `main`
-- URL: [Coming soon]
+Sivut on GitHubissa:
+- Repo: `github.com/azhemin/Soulgrind`
+- Branch: `master`
 
-### Deployment Steps
+### Päivitys GitHubiin
 ```bash
 git add .
-git commit -m "Update website"
-git push origin main
+git commit -m "Päivitys"
+git push origin master
 ```
 
-## ⚡ Performance Optimizations
+##  Optimoinnit
 
-- Lazy loading for YouTube iframe
-- CSS variable system for easy theme changes
-- Minified external libraries via CDN
-- Optimized image sizes
-- Smooth scroll performance
-- AOS animations with 800ms duration
+- YouTube lazy loading
+- CSS-muuttujat (helppo vaihtaa värejä)
+- Bootstrap ja muut kirjastot CDN:stä
+- Smooth scroll
+- AOS animaatiot
 
-## 🐛 Known Issues
+##  Tiedossa olevat jutut
 
-- YouTube video requires user interaction to play (browser autoplay policies)
-- JSON files require HTTP server (can't run with file:// protocol)
+- YouTube-video ei autoplay (selaimen käytäntö)
+- Tarvii HTTP-serverin JSON-datoille (ei toimi suoraan tiedostosta)
 
-## 📝 Future Enhancements
+##  Mahdollisia lisäyksiä tulevaisuudessa
 
-- [ ] Add photo gallery section
-- [ ] Implement actual form submission (backend required)
-- [ ] Add language switcher (Finnish/English)
-- [ ] Create album detail pages
-- [ ] Add merch store integration
+- [ ] Kuvagalleria
+- [ ] Lomakkeen lähetys (tarvii backendin)
+- [ ] Kielivalinta (suomi/englanti)
+- [ ] Albumien omat sivut
+- [ ] Merch-kauppa
 
-## 📧 Contact
+##  Yhteystiedot
 
-**Project Maintainer**: Miika Niemelä  
-**Band Email**: chopper.forever@gmail.com  
-**Repository**: [github.com/azhemin/Soulgrind](https://github.com/azhemin/Soulgrind)
-
-## 📜 License
-
-© 2024 Soulgrind. All rights reserved.  
-All music, images, and content are property of Soulgrind and Inverse Records.
+**Tekijä**: Miika Niemelä  
+**Bändin email**: chopper.forever@gmail.com  
+**GitHub**: [github.com/azhemin/Soulgrind](https://github.com/azhemin/Soulgrind)
 
 ---
 
-**Note**: This website was built as a modern, professional representation of Soulgrind's 30+ year legacy in the Finnish metal scene. All band information sourced from official Metal Archives database and verified through Inverse Records.
+Tein nämä sivut Soulgrindille näyttämään bändin 30+ vuoden historian tyylikkäästi. Tiedot haettu Metal Archives -tietokannasta ja tarkistettu Inverse Recordsin kautta.
